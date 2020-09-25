@@ -6,5 +6,22 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        baseUrl: `sparkpost.test`,
+        protocol: `http`,
+        hostingWPCOM: false,
+        verboseOutput: true,
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/taxonomies",
+          "**/users",
+        ],
+      },
+    },
+  ],
 }
