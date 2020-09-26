@@ -14,12 +14,9 @@ module.exports = {
         protocol: `http`,
         hostingWPCOM: false,
         verboseOutput: true,
-        includedRoutes: [
-          "**/categories",
-          "**/posts",
-          "**/pages",
-          "**/taxonomies",
-          "**/users",
+        excludedRoutes: [
+          "**/comments",
+          "**/media",
         ],
       },
     },
