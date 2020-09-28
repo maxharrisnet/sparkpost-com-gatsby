@@ -40,6 +40,24 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allWordpressWpSupportArticle {
+        edges {
+          node {
+            id
+            path
+            slug
+          }
+        }
+      }
+      allWordpressWpMomentumArticle {
+        edges {
+          node {
+            id
+            path
+            slug
+          }
+        }
+      }
     }
   `)
 
@@ -49,7 +67,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Query results destructured
-  const { allWordpressPage, allWordpressPost, allWordpressWpPress } = result.data
+  const { allWordpressPage, allWordpressPost, allWordpressWpPress, allWordpressWpSupportArticle, allWordpressWpMomentumArticle } = result.data
 
   // Define the Page template
   const pageTemplate = path.resolve(`./src/templates/pages/page-default.js`)
@@ -84,6 +102,32 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: edge.node.path,
       component: slash(pressTemplate),
+      context: {
+        id: edge.node.id,
+      },
+    })
+  })
+
+  // Define the Support Article template
+  const supportArticleTemplate = path.resolve(`./src/templates/support-docs/support-article-default.js`)
+
+    allWordpressWpSupportArticle.edges.forEach(edge => {
+    createPage({
+      path: edge.node.path,
+      component: slash(supportArticleTemplate),
+      context: {
+        id: edge.node.id,
+      },
+    })
+  })
+
+  // Define the Momentum Artcile template
+  const momentumArticleTemplate = path.resolve(`./src/templates/momentum-docs/momentum-article-default.js`)
+
+    allWordpressWpMomentumArticle.edges.forEach(edge => {
+    createPage({
+      path: edge.node.path,
+      component: slash(momentumArticleTemplate),
       context: {
         id: edge.node.id,
       },
