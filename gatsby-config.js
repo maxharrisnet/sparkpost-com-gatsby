@@ -10,9 +10,11 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `sparkpost.test`,
+        // baseUrl: `sparkpost.test`,
+        baseUrl: process.env.WORDPRESS_URL,
         protocol: `http`,
         hostingWPCOM: false,
+        useACF: true,
         verboseOutput: true,
         includedRoutes: [
           "**/categories",
