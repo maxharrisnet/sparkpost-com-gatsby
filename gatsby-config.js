@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: `http://sparkpost.test`,
+        url: `https://staging.sparkpost.com/graphql`,
         // url: process.env.WORDPRESS_URL,
         verbose: true,
       },
