@@ -12,6 +12,11 @@ module.exports = {
       options: {
         url: `https://staging.sparkpost.com/graphql`,
         // url: process.env.WORDPRESS_URL,
+        type: {
+          Comment: {
+            exclude: true,
+          }
+        },
         verbose: true,
         debug: {
           graphql: {
@@ -22,6 +27,7 @@ module.exports = {
           },
         },
       },
+      resolve: `gatsby-plugin-sharp`,
     },
   ],
 }
