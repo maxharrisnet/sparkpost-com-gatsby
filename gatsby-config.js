@@ -8,21 +8,11 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: `gatsby-source-wordpress`,
+      resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        // baseUrl: `sparkpost.test`,
-        baseUrl: process.env.WORDPRESS_URL,
-        protocol: `http`,
-        hostingWPCOM: false,
-        useACF: true,
-        verboseOutput: true,
-        includedRoutes: [
-          "**/categories",
-          "**/posts",
-          "**/pages",
-          "**/taxonomies",
-          "**/users",
-        ],
+        url: `http://sparkpost.test`,
+        // url: process.env.WORDPRESS_URL,
+        verbose: true,
       },
     },
   ],
