@@ -13,6 +13,14 @@ module.exports = {
         url: `https://staging.sparkpost.com/graphql`,
         // url: process.env.WORDPRESS_URL,
         verbose: true,
+        debug: {
+          graphql: {
+            showQueryVarsOnError: true,
+            panicOnError: false,
+            onlyReportCriticalErrors: true,
+            writeQueriesToDisk: true,
+          },
+        },
       },
     },
   ],
