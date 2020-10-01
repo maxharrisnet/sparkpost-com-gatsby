@@ -2,14 +2,6 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
   menu(id: $id) {
     count
     databaseId
-    globalBannerOptions {
-      fieldGroupName
-      headerBannerCtaLabel
-      headerBannerCtaLink
-      headerBannerText
-      headerBannerTextMobile
-      showHeaderBanner
-    }
     id
     locations
     menuItems(first: 100) {

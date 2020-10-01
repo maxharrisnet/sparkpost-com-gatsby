@@ -1,15 +1,5 @@
 query PREVIEW_QUERY($id: ID!) {
-  post(id: $id, idType: ID, asPreview: true) {
-    authorDatabaseId
-    authorId
-    categories(first: 100) {
-      nodes {
-        id
-      }
-    }
-    commentCount
-    commentStatus
-    content
+  newsArticle(id: $id, idType: ID, asPreview: true) {
     contentType {
       node {
         id
@@ -20,28 +10,12 @@ query PREVIEW_QUERY($id: ID!) {
     dateGmt
     desiredSlug
     enclosure
-    excerpt
-    featuredImage {
-      node {
-        id
-        sourceUrl
-      }
-    }
-    featuredImageDatabaseId
-    featuredImageId
     guid
     id
     isRevision
     link
     modified
     modifiedGmt
-    pingStatus
-    pinged
-    postFormats(first: 100) {
-      nodes {
-        id
-      }
-    }
     slug
     status
     template {
@@ -56,7 +30,6 @@ query PREVIEW_QUERY($id: ID!) {
       }
     }
     title
-    toPing
     uri
     __typename
   }

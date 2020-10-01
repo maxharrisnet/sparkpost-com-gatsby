@@ -3,14 +3,6 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
     nodes {
       count
       databaseId
-      globalBannerOptions {
-        fieldGroupName
-        headerBannerCtaLabel
-        headerBannerCtaLink
-        headerBannerText
-        headerBannerTextMobile
-        showHeaderBanner
-      }
       id
       locations
       menuItems(first: 100) {

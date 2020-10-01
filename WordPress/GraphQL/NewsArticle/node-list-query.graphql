@@ -1,16 +1,6 @@
 query NODE_LIST_QUERY($first: Int!, $after: String) {
-  posts(first: $first, after: $after) {
+  newsArticles(first: $first, after: $after) {
     nodes {
-      authorDatabaseId
-      authorId
-      categories(first: 100) {
-        nodes {
-          id
-        }
-      }
-      commentCount
-      commentStatus
-      content
       contentType {
         node {
           id
@@ -21,28 +11,12 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
       dateGmt
       desiredSlug
       enclosure
-      excerpt
-      featuredImage {
-        node {
-          id
-          sourceUrl
-        }
-      }
-      featuredImageDatabaseId
-      featuredImageId
       guid
       id
       isRevision
       link
       modified
       modifiedGmt
-      pingStatus
-      pinged
-      postFormats(first: 100) {
-        nodes {
-          id
-        }
-      }
       slug
       status
       template {
@@ -57,7 +31,6 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
         }
       }
       title
-      toPing
       uri
       __typename
     }

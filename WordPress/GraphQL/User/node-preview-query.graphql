@@ -22,6 +22,11 @@ query PREVIEW_QUERY($id: ID!) {
     id
     lastName
     locale
+    momentumArticles(first: 100) {
+      nodes {
+        id
+      }
+    }
     name
     nicename
     nickname
@@ -41,30 +46,14 @@ query PREVIEW_QUERY($id: ID!) {
         id
       }
     }
-    seo {
-      metaDesc
-      metaRobotsNofollow
-      metaRobotsNoindex
-      social {
-        facebook
-        instagram
-        linkedIn
-        mySpace
-        pinterest
-        soundCloud
-        twitter
-        wikipedia
-        youTube
-      }
-      title
-    }
     slug
+    supportArticles(first: 100) {
+      nodes {
+        id
+      }
+    }
     uri
     url
-    userOptions {
-      fieldGroupName
-      linkedin
-    }
     username
     __typename
   }

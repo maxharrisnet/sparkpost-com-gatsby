@@ -8,11 +8,6 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
           __typename
         }
       }
-      author {
-        node {
-          id
-        }
-      }
       authorDatabaseId
       authorId
       caption
@@ -38,11 +33,6 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
       fileSize
       guid
       id
-      lastEditedBy {
-        node {
-          id
-        }
-      }
       link
       mediaDetails {
         file
@@ -85,38 +75,6 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
       }
       parentDatabaseId
       parentId
-      seo {
-        breadcrumbs {
-          text
-          url
-        }
-        canonical
-        focuskw
-        metaDesc
-        metaKeywords
-        metaRobotsNofollow
-        metaRobotsNoindex
-        opengraphAuthor
-        opengraphDescription
-        opengraphImage {
-          id
-          sourceUrl
-        }
-        opengraphModifiedTime
-        opengraphPublishedTime
-        opengraphPublisher
-        opengraphSiteName
-        opengraphTitle
-        opengraphType
-        opengraphUrl
-        title
-        twitterDescription
-        twitterImage {
-          id
-          sourceUrl
-        }
-        twitterTitle
-      }
       sizes
       slug
       sourceUrl

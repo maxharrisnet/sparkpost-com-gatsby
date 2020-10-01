@@ -1,21 +1,5 @@
 query PREVIEW_QUERY($id: ID!) {
-  page(id: $id, idType: ID, asPreview: true) {
-    ancestors(first: 100) {
-      nodes {
-        id
-        __typename
-      }
-    }
-    authorDatabaseId
-    authorId
-    wpChildren: children(first: 100) {
-      nodes {
-        id
-        __typename
-      }
-    }
-    commentCount
-    commentStatus
+  pressRelease(id: $id, idType: ID, asPreview: true) {
     content
     contentType {
       node {
@@ -37,21 +21,10 @@ query PREVIEW_QUERY($id: ID!) {
     featuredImageId
     guid
     id
-    isFrontPage
-    isPostsPage
     isRevision
     link
-    menuOrder
     modified
     modifiedGmt
-    wpParent: parent {
-      node {
-        id
-        __typename
-      }
-    }
-    parentDatabaseId
-    parentId
     slug
     status
     template {

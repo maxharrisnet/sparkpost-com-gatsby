@@ -7,11 +7,6 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
         __typename
       }
     }
-    author {
-      node {
-        id
-      }
-    }
     authorDatabaseId
     authorId
     caption
@@ -37,11 +32,6 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
     fileSize
     guid
     id
-    lastEditedBy {
-      node {
-        id
-      }
-    }
     link
     mediaDetails {
       file
@@ -84,38 +74,6 @@ query SINGLE_CONTENT_QUERY($id: ID!) {
     }
     parentDatabaseId
     parentId
-    seo {
-      breadcrumbs {
-        text
-        url
-      }
-      canonical
-      focuskw
-      metaDesc
-      metaKeywords
-      metaRobotsNofollow
-      metaRobotsNoindex
-      opengraphAuthor
-      opengraphDescription
-      opengraphImage {
-        id
-        sourceUrl
-      }
-      opengraphModifiedTime
-      opengraphPublishedTime
-      opengraphPublisher
-      opengraphSiteName
-      opengraphTitle
-      opengraphType
-      opengraphUrl
-      title
-      twitterDescription
-      twitterImage {
-        id
-        sourceUrl
-      }
-      twitterTitle
-    }
     sizes
     slug
     sourceUrl

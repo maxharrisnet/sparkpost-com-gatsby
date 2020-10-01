@@ -1,22 +1,6 @@
 query NODE_LIST_QUERY($first: Int!, $after: String) {
-  pages(first: $first, after: $after) {
+  pressReleases(first: $first, after: $after) {
     nodes {
-      ancestors(first: 100) {
-        nodes {
-          id
-          __typename
-        }
-      }
-      authorDatabaseId
-      authorId
-      wpChildren: children(first: 100) {
-        nodes {
-          id
-          __typename
-        }
-      }
-      commentCount
-      commentStatus
       content
       contentType {
         node {
@@ -38,21 +22,10 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
       featuredImageId
       guid
       id
-      isFrontPage
-      isPostsPage
       isRevision
       link
-      menuOrder
       modified
       modifiedGmt
-      wpParent: parent {
-        node {
-          id
-          __typename
-        }
-      }
-      parentDatabaseId
-      parentId
       slug
       status
       template {

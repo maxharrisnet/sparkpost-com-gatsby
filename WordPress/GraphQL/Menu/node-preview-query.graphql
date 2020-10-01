@@ -2,14 +2,6 @@ query PREVIEW_QUERY($id: ID!) {
   menu(id: $id, idType: ID, asPreview: true) {
     count
     databaseId
-    globalBannerOptions {
-      fieldGroupName
-      headerBannerCtaLabel
-      headerBannerCtaLink
-      headerBannerText
-      headerBannerTextMobile
-      showHeaderBanner
-    }
     id
     locations
     menuItems(first: 100) {

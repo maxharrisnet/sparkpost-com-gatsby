@@ -1,6 +1,5 @@
-query PREVIEW_QUERY($id: ID!) {
-  mediaItem(id: $id, idType: ID, asPreview: true) {
-    altText
+query SINGLE_CONTENT_QUERY($id: ID!) {
+  supportArticle(id: $id) {
     ancestors(first: 100) {
       nodes {
         id
@@ -9,15 +8,13 @@ query PREVIEW_QUERY($id: ID!) {
     }
     authorDatabaseId
     authorId
-    caption
     wpChildren: children(first: 100) {
       nodes {
         id
         __typename
       }
     }
-    commentCount
-    commentStatus
+    content
     contentType {
       node {
         id
@@ -26,44 +23,13 @@ query PREVIEW_QUERY($id: ID!) {
     databaseId
     date
     dateGmt
-    description
     desiredSlug
     enclosure
-    fileSize
+    excerpt
     guid
     id
+    isRevision
     link
-    mediaDetails {
-      file
-      height
-      meta {
-        aperture
-        camera
-        caption
-        copyright
-        createdTimestamp
-        credit
-        focalLength
-        iso
-        keywords
-        orientation
-        shutterSpeed
-        title
-      }
-      sizes {
-        file
-        fileSize
-        height
-        mimeType
-        name
-        sourceUrl
-        width
-      }
-      width
-    }
-    mediaItemUrl
-    mediaType
-    mimeType
     modified
     modifiedGmt
     wpParent: parent {
@@ -74,10 +40,7 @@ query PREVIEW_QUERY($id: ID!) {
     }
     parentDatabaseId
     parentId
-    sizes
     slug
-    sourceUrl
-    srcSet
     status
     template {
       templateFile

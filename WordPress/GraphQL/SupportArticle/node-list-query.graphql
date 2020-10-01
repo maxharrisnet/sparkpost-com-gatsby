@@ -1,5 +1,5 @@
 query NODE_LIST_QUERY($first: Int!, $after: String) {
-  pages(first: $first, after: $after) {
+  supportArticles(first: $first, after: $after) {
     nodes {
       ancestors(first: 100) {
         nodes {
@@ -15,8 +15,6 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
           __typename
         }
       }
-      commentCount
-      commentStatus
       content
       contentType {
         node {
@@ -28,21 +26,11 @@ query NODE_LIST_QUERY($first: Int!, $after: String) {
       dateGmt
       desiredSlug
       enclosure
-      featuredImage {
-        node {
-          id
-          sourceUrl
-        }
-      }
-      featuredImageDatabaseId
-      featuredImageId
+      excerpt
       guid
       id
-      isFrontPage
-      isPostsPage
       isRevision
       link
-      menuOrder
       modified
       modifiedGmt
       wpParent: parent {
