@@ -1,0 +1,46 @@
+query PREVIEW_QUERY($id: ID!) {
+  newsArticle(id: $id, idType: ID, asPreview: true) {
+    articleOptions {
+      fieldGroupName
+      link
+      publication
+    }
+    contentType {
+      node {
+        id
+      }
+    }
+    databaseId
+    date
+    dateGmt
+    desiredSlug
+    enclosure
+    guid
+    id
+    isRevision
+    lastEditedBy {
+      node {
+        id
+      }
+    }
+    link
+    modified
+    modifiedGmt
+    slug
+    status
+    template {
+      templateFile
+      templateName
+      __typename
+    }
+    terms(first: 100) {
+      nodes {
+        id
+        __typename
+      }
+    }
+    title
+    uri
+    __typename
+  }
+}

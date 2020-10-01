@@ -17,6 +17,9 @@ module.exports = {
             exclude: true,
           },
         },
+        html: {
+          useGatsbyImage: false,
+        },
         verbose: true,
         debug: {
           graphql: {
