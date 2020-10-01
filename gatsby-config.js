@@ -7,15 +7,15 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
         url: `https://staging.sparkpost.com/graphql`,
-        // url: process.env.WORDPRESS_URL,
         type: {
           Comment: {
             exclude: true,
-          }
+          },
         },
         verbose: true,
         debug: {
@@ -27,7 +27,6 @@ module.exports = {
           },
         },
       },
-      resolve: `gatsby-plugin-sharp`,
     },
   ],
 }
