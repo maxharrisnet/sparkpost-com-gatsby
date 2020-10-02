@@ -12,7 +12,6 @@ module.exports = {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
         url: `https://staging.sparkpost.com/graphql`,
-        // url: `https://sparkpost.test/graphql`,
         type: {
           Comment: {
             exclude: true,

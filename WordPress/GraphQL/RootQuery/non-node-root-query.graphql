@@ -38,6 +38,118 @@ query NON_NODE_QUERY {
     postsPerPage
   }
 
+  seo {
+    breadcrumbs {
+      archivePrefix
+      boldLast
+      enabled
+      homeText
+      notFoundText
+      prefix
+      searchPrefix
+      separator
+      showBlogPage
+    }
+
+    openGraph {
+      defaultImage {
+        id
+        sourceUrl
+      }
+
+      frontPage {
+        description
+
+        image {
+          id
+          sourceUrl
+        }
+
+        title
+      }
+    }
+
+    redirects {
+      format
+      origin
+      target
+      type
+    }
+
+    schema {
+      companyLogo {
+        id
+        sourceUrl
+      }
+
+      companyName
+      companyOrPerson
+      inLanguage
+
+      logo {
+        id
+        sourceUrl
+      }
+
+      personLogo {
+        id
+        sourceUrl
+      }
+
+      siteName
+      siteUrl
+      wordpressSiteName
+    }
+
+    social {
+      facebook {
+        defaultImage {
+          id
+          sourceUrl
+        }
+
+        url
+      }
+
+      instagram {
+        url
+      }
+
+      linkedIn {
+        url
+      }
+
+      mySpace {
+        url
+      }
+
+      pinterest {
+        metaTag
+        url
+      }
+
+      twitter {
+        cardType
+        username
+      }
+
+      wikipedia {
+        url
+      }
+
+      youTube {
+        url
+      }
+    }
+
+    webmaster {
+      baiduVerify
+      googleVerify
+      msVerify
+      yandexVerify
+    }
+  }
+
   writingSettings {
     defaultCategory
     defaultPostFormat
