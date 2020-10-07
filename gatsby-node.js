@@ -19,6 +19,22 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
+      allWpSupportArticle {
+        nodes {
+          date
+          title
+          slug
+          uri
+        }
+      }
+      allWpMomentumArticle {
+        nodes {
+          date
+          title
+          slug
+          uri
+        }
+      }
     }
   `).then(result => {
     result.data.allWpPost.nodes.forEach((node) => {
@@ -34,6 +50,24 @@ exports.createPages = async ({ graphql, actions }) => {
       createPage({
         path: `/press-releases/${node.slug}`,
         component: path.resolve(`./src/templates/press-single.js`),
+        context: {
+          slug: node.slug,
+        }
+      })
+    })
+    result.data.allWpSupportArticle.nodes.forEach((node) => {
+      createPage({
+        path: `/docs/${node.slug}`,
+        component: path.resolve(`./src/templates/support-single.js`),
+        context: {
+          slug: node.slug,
+        }
+      })
+    })
+    result.data.allWpMomentumArticle.nodes.forEach((node) => {
+      createPage({
+        path: node.slug,
+        component: path.resolve(`./src/templates/momentum-single.js`),
         context: {
           slug: node.slug,
         }

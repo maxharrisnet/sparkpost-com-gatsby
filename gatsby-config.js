@@ -14,24 +14,44 @@ module.exports = {
         url: `https://staging.sparkpost.com/graphql`,
         type: {
           Comment: {
-            exclude: true,
+            exclude: false,
           },
           Tag: {
             exclude: true,
           },
           User: {
             exclude: true,
-          }
+          },
+          UserRole: {
+            exclude: true,
+          },
         },
         html: {
           useGatsbyImage: false,
+        },
+        type: {
+          Post: {
+            limit: 50
+          },
+          SupportArticle: {
+            limit: 50
+          },
+          MomentumArticle: {
+            limit: 50
+          },
+          NewsArticle: {
+            limit: 50
+          },
+          Tag: {
+            limit: 50
+          },
         },
         verbose: true,
         debug: {
           graphql: {
             showQueryVarsOnError: true,
             panicOnError: false,
-            onlyReportCriticalErrors: true,
+            onlyReportCriticalErrors: false,
             writeQueriesToDisk: true,
           },
         },
