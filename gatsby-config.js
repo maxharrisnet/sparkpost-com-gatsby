@@ -21,7 +21,6 @@ module.exports = {
           },
           User: {
             exclude: true,
-
           }
         },
         html: {
