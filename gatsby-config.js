@@ -51,7 +51,7 @@ module.exports = {
           graphql: {
             showQueryVarsOnError: true,
             panicOnError: false,
-            onlyReportCriticalErrors: false,
+            onlyReportCriticalErrors: true,
             writeQueriesToDisk: true,
           },
         },
