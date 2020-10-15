@@ -14,7 +14,7 @@ module.exports = {
         url: `https://staging.sparkpost.com/graphql`,
         type: {
           Comment: {
-            exclude: false,
+            exclude: true,
           },
           Tag: {
             exclude: true,
@@ -25,26 +25,12 @@ module.exports = {
           UserRole: {
             exclude: true,
           },
+          MomentumArticle: {
+            limit: 50,
+          },
         },
         html: {
           useGatsbyImage: false,
-        },
-        type: {
-          Post: {
-            limit: 50
-          },
-          SupportArticle: {
-            limit: 50
-          },
-          MomentumArticle: {
-            limit: 50
-          },
-          NewsArticle: {
-            limit: 50
-          },
-          Tag: {
-            limit: 50
-          },
         },
         verbose: true,
         debug: {

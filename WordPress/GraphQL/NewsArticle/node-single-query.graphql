@@ -1,0 +1,68 @@
+query SINGLE_CONTENT_QUERY($id: ID!) {
+  newsArticle(id: $id) {
+    contentType {
+      node {
+        id
+      }
+    }
+    databaseId
+    date
+    dateGmt
+    desiredSlug
+    enclosure
+    guid
+    id
+    isRevision
+    link
+    modified
+    modifiedGmt
+    seo {
+      breadcrumbs {
+        text
+        url
+      }
+      canonical
+      focuskw
+      metaDesc
+      metaKeywords
+      metaRobotsNofollow
+      metaRobotsNoindex
+      opengraphAuthor
+      opengraphDescription
+      opengraphImage {
+        id
+        sourceUrl
+      }
+      opengraphModifiedTime
+      opengraphPublishedTime
+      opengraphPublisher
+      opengraphSiteName
+      opengraphTitle
+      opengraphType
+      opengraphUrl
+      title
+      twitterDescription
+      twitterImage {
+        id
+        sourceUrl
+      }
+      twitterTitle
+    }
+    slug
+    status
+    template {
+      templateFile
+      templateName
+      __typename
+    }
+    terms(first: 100) {
+      nodes {
+        id
+        __typename
+      }
+    }
+    title
+    uri
+    __typename
+  }
+}
