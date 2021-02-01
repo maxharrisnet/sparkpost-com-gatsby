@@ -1,0 +1,82 @@
+query PREVIEW_QUERY($id: ID!) {
+  user(id: $id, idType: ID, asPreview: true) {
+    avatar {
+      default
+      extraAttr
+      forceDefault
+      foundAvatar
+      height
+      rating
+      scheme
+      size
+      url
+      width
+    }
+    capKey
+    capabilities
+    comments(first: 100) {
+      nodes {
+        id
+      }
+    }
+    databaseId
+    description
+    email
+    extraCapabilities
+    firstName
+    id
+    lastName
+    locale
+    momentumArticles(first: 100) {
+      nodes {
+        id
+      }
+    }
+    name
+    nicename
+    nickname
+    pages(first: 100) {
+      nodes {
+        id
+      }
+    }
+    posts(first: 100) {
+      nodes {
+        id
+      }
+    }
+    registeredDate
+    roles(first: 100) {
+      nodes {
+        id
+      }
+    }
+    seo {
+      metaDesc
+      metaRobotsNofollow
+      metaRobotsNoindex
+      social {
+        facebook
+        instagram
+        linkedIn
+        mySpace
+        pinterest
+        soundCloud
+        twitter
+        wikipedia
+        youTube
+      }
+      title
+    }
+    slug
+    supportArticles(first: 100) {
+      nodes {
+        id
+      }
+    }
+    uri
+    url
+    username
+    __typename
+  }
+}
